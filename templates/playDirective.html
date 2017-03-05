@@ -1,0 +1,22 @@
+<ul >
+  <li ng-repeat="name in songData">
+    <div class="data-show">
+      <div class="artist-name">
+        {{name.artistName}}
+      </div>
+      <img class="artist-img" ng-src="{{name.artworkUrl100}}" alt="" />
+      <div class="dash-board">
+        <div class="play-pause-btn">
+          <button class="fa fa-play my-fa-play " aria-hidden="true" type="button" name="button"></button>
+          <p>{{name.trackName}}</p>
+        </div>
+        <div class="wave-img">
+          <img src="imgs/wave.png"/>
+        </div>
+        <div class="add-like-btn">
+          <button class="fa fa-heart" aria-hidden="true" type="button" name="button"></button>
+          <button class="fa fa-plus" aria-hidden="true"type="button" name="button"></button>
+        </div>
+      </div>
+    </div>
+  </li>

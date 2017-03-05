@@ -17,13 +17,13 @@ angular.module('musicApp')
         console.log($scope.songData);
     })
   }
-  $scope.getRandomSongs = function () {
-    mainService.getArtist('hi')
-    .then(function(result){
-        $scope.randomSongs = result.data.results;
-    })
-  }
-  $scope.getRandomSongs()
+  // $scope.getRandomSongs = function () {
+  //   mainService.getArtist('hi')
+  //   .then(function(result){
+  //       $scope.randomSongs = result.data.results;
+  //   })
+  // }
+  // $scope.getRandomSongs()
 
 
   $scope.goToSearchResults = function(){
@@ -43,4 +43,5 @@ angular.module('musicApp')
   logged = false;
   }
 
+  $scope.testDir = 'it works'
 })
