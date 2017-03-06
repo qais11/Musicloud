@@ -289,3 +289,10 @@ small{
   color: #f60;
   font-size: 40pt;
 }
+.about-text{
+
+  font-family:  'Roboto Condensed', sans-serif;
+  color: black;
+  font-size: 21pt;
+  text-align: left;
+}
