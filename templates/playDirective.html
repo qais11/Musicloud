@@ -15,8 +15,8 @@
           <img src="imgs/wave.png"/>
         </div>
         <div class="add-like-btn">
-          <button class="fa fa-heart" aria-hidden="true" type="button" name="button"></button>
-          <button class="fa fa-plus" aria-hidden="true"type="button" name="button"></button>
+          <button onclick='hightlight(this)' ng-click='addTolikes({artistName: name.artistName ,trackName: name.trackName , previewUrl :name.previewUrl, artworkUrl100: name.artworkUrl100 })' class="my-button fa fa-heart" aria-hidden="true" type="button" name="button"></button>
+          <button id='play-list' onclick='hightlight(this)' ng-click='addToPlayList({artistName: name.artistName ,trackName: name.trackName , previewUrl :name.previewUrl, artworkUrl100: name.artworkUrl100 })' class=" fa fa-plus" aria-hidden="true"type="button" name="button"></button>
         </div>
       </div>
     </div>

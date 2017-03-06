@@ -20,12 +20,12 @@ angular.module('musicApp' , ['ui.router'])
     .state('likes', {
         url : '/likes'
       , templateUrl : './templates/likes.html'
-      , controller: 'mainCtrl'
+      , controller: 'likesCtrl'
     })
     .state('playlist', {
         url : '/playlist'
       , templateUrl : './templates/playlist.html'
-      , controller: 'mainCtrl'
+      , controller: 'playlistCtrl'
     })
     .state('search-results', {
         url : '/search-results'

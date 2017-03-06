@@ -34,25 +34,32 @@ this.sign =  function(name , password){
               url:'https://itunes.apple.com/search?term=' + artistName,
         }).then(function(response){
           return response
-          // console.log(response.data.results[0].artistName);
-            var dataArr =[];
-            var responseArray = response.data.results
-                  for (var i =0 ; i <responseArray.length ; i++){
-                    var songData = {
-                      AlbumArt : responseArray[i].artworkUrl60,
-                    Artist : responseArray[i].artistName,
-                    Song : responseArray[i].trackName,
-                    Collection : responseArray[i].collectionName,
-                    CollectionPrice : responseArray[i].collectionPrice,
-                    Play : responseArray[i].previewUrl,
-                    Type : responseArray[i].primaryGenreName
-
-                }
-                dataArr.push(songData)
-            }
     })
   }
+  var self = this
+  this.playlist = [];
+  this.likes = [];
+  this.addToPlayList = function(obj){
+    for (var i = 0 ; i < self.playlist.length ; i++){
+      if(self.playlist[i].previewUrl === obj.previewUrl){
+        self.playlist.splice(i , 1)
+        return;
+      }
+    }
+  self.playlist.push(obj)
+ }
 
+ this.addTolikes = function(obj){
+   for (var i = 0 ; i < self.likes.length ; i++){
+     if(self.likes[i].previewUrl === obj.previewUrl){
+       self.likes.splice(i , 1)
+       console.log(self.likes , 'Removed');
+       return;
+     }
+   }
+ self.likes.push(obj)
+ console.log(self.likes , 'addedd');
+}
 
 
 

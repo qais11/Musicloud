@@ -4,11 +4,12 @@ angular.module('musicApp')
   $scope.getArtist = function () {
     mainService.getArtist('Love')
     .then(function(result){
-      // console.log(result);
         $scope.songData = result.data.results;
         console.log($scope.songData);
     })
   }
   $scope.getArtist();
+  $scope.addToPlayList = mainService.addToPlayList;
+  $scope.addTolikes = mainService.addTolikes;
 
 })

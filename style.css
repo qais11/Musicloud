@@ -7,7 +7,7 @@
 
 body{
   margin: 0;
-  background-color: #F2F2F2;
+  background-color: #eaeaea;
   text-align: center;
 }
 header{
@@ -23,7 +23,7 @@ header{
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: 920px;
+  max-width: 1000px;
   margin: auto;
 }
 header button.home-btn{
@@ -83,25 +83,6 @@ header button.home-btn{
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }
-/*.nav-right-container > a > ul > a{
-  display: none;
-  margin: 0;
-  padding: 0;
-  position: relative;
-}
-.nav-right-container > a > ul{
-  background-color: black;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  z-index: 9;
-  display: none;
-
-}
-
-.nav-right-container > a:hover {
-  display: block;
-}*/
 #go-to-search-btn{
   display: none;
 }
@@ -118,11 +99,12 @@ header img{
 section{
   background-color: white;
   width: 100%;
-  max-width: 920px;
+  max-width: 1000px;
   margin: auto;
   margin-top: 25px;
   text-align: center;
   padding: 30px 30px;
+  padding-bottom: 41vh;
   }
 ul{
   padding: 0;
@@ -267,4 +249,38 @@ small{
 .stop{
   display: none;
   padding: 10px 12px;
+}
+.add-like-btn > button{
+  background: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid lightgray;
+}
+.hightlight{
+  background-color: #f60!important;
+  color: white;
+}
+.dropdown-wrapper{
+  position: relative;
+}
+.my-dropdown-menu{
+  position: absolute;
+  bottom: -203px;
+  right: -33px;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  z-index: -2;
+}
+.my-dropdown-menu a{
+  color: lightgray;
+}
+.my-dropdown-menu a:hover{
+  color: #f60;
+  text-decoration: none;
+}
+.my-dropdown-menu li{
+  padding: 20px 52px;
+  text-align: left;
+  border-top: .5px solid #404040;
+  font-family:  'Roboto Condensed', sans-serif;
 }

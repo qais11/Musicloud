@@ -1,3 +1,24 @@
+function getWavesurfer(scope){
+  var wavesurfer = WaveSurfer.create({
+      container: '#waveform',
+      scrollParent: true,
+      progressColor: '#ff6940',
+      waveColor: 'lightgray',
+      barWidth: 2,
+      height: 65
+    });
+    wavesurfer.on('ready', function () {
+
+      wavesurfer.play();
+
+    });
+    scope.wavesurfer = wavesurfer;
+    scope.playSong = function(song){
+        wavesurfer.play()
+        wavesurfer.load(song)
+
+    }
+}
 var hidePlay = function( obj ){
   showWaveform();
   obj.style.display = 'none';
@@ -25,3 +46,13 @@ function hideWaveform(){
     bottom: '-65px'
   })
 }
+function hightlight(obj){
+  $(obj).toggleClass('hightlight');
+}
+$('.menu-img').click(function(){
+  console.log('hi');
+  $('.my-dropdown-menu').fadeIn( 300 )
+})
+$('section , .my-dropdown-menu a').click(function(){
+  $('.my-dropdown-menu').hide()
+})
