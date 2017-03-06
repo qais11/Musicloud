@@ -284,3 +284,8 @@ small{
   border-top: .5px solid #404040;
   font-family:  'Roboto Condensed', sans-serif;
 }
+.musicloud-p{
+  font-family:  'Roboto Condensed', sans-serif;
+  color: #f60;
+  font-size: 40pt;
+}
