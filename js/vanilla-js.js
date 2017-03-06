@@ -15,6 +15,7 @@ function getWavesurfer(scope){
     scope.wavesurfer = wavesurfer;
     scope.playSong = function(song){
         wavesurfer.play()
+        console.log(song);
         wavesurfer.load(song)
 
     }
