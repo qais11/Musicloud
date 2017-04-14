@@ -23,11 +23,8 @@ function getWavesurfer(scope){
 var hidePlay = function( obj ){
   showWaveform();
   obj.style.display = 'none';
-  // $('button.play').hide();
-  // $('button.stop').show();
   $(obj).next().show();
-  // $('test ~ button').show()
-  // $(obj + '+ button').css('display' , 'inline-block')
+  
 }
 var hideStop = function( obj ){
   hideWaveform()

@@ -296,3 +296,6 @@ small{
   font-size: 21pt;
   text-align: left;
 }
+.about-text > em{
+  color: #FF7300;
+}
