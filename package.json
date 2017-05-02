@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "gulp-uglifycss": "^1.0.6"
+    "gulp-uglifycss": "^1.0.6",
+    "validator": "^7.0.0"
   },
   "devDependencies": {
     "gulp": "^3.9.1",

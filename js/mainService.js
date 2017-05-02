@@ -31,7 +31,7 @@ this.sign =  function(name , password){
   this.getArtist = function(artistName){
         return $http({
               method:'JSONP',
-              url:'http://itunes.apple.com/search?term=' + artistName,
+              url:'https://itunes.apple.com/search?term=' + artistName,
         }).then(function(response){
           return response
     })
@@ -58,6 +58,7 @@ this.sign =  function(name , password){
      }
    }
  self.likes.push(obj)
+
  console.log(self.likes , 'addedd');
 }
 

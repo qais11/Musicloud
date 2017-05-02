@@ -194,6 +194,10 @@ header {
   z-index: 10;
 }
 
+h1 {
+  font-family: fantasy;
+}
+
 .header-wrapper {
   display: flex;
   align-items: center;
