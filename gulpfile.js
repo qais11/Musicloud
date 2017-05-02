@@ -5,6 +5,7 @@ var gulp = require('gulp');
 var uglify = require('gulp-uglify');
 var pump = require('pump');
 var concatCss = require('gulp-concat-css');
+var concat = require('gulp-concat')
 
 
 var paths = {
@@ -15,10 +16,11 @@ var paths = {
 gulp.task('combine-css', function () {
   return gulp.src('*.css')
     .pipe(concatCss("bundle.css"))
+    // .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', ["minify-css", "combine-css", "compress"], function(){
+gulp.task('default', ["html", "png", "combine-css", "js"], function(){
 
 });
 
@@ -37,12 +39,27 @@ gulp.task('css', function () {
    .pipe(gulp.dest('./dist/'));
 });
 
+gulp.task('html', function() {
+  gulp.src('**/*.html')
+  .pipe(gulp.dest('./dist'))
+})
+
+gulp.task('png', function() {
+  gulp.src('imgs/*.png')
+  .pipe(gulp.dest('./dist/imgs/'))
+})
+
+gulp.task('js', function() {
+  gulp.src('js/**/*.js')
+  .pipe(concat('bundle.js'))
+  .pipe(gulp.dest('./dist'))
+})
 
 gulp.task('compress', function (cb) {
   pump([
         gulp.src('js/**.js'),
         uglify(),
-        gulp.dest('dist')
+        gulp.dest('dist/js')
     ],
     cb
   );

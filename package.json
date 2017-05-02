@@ -1,7 +1,6 @@
 {
   "name": "musicloud",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "dependencies": {
     "body-parser": "^1.17.1",
@@ -15,12 +14,14 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.0.3",
+    "gulp-concat": "^2.6.1",
     "gulp-concat-css": "^2.3.0",
     "gulp-uglify": "^2.1.0",
     "pump": "^1.0.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -31,5 +32,6 @@
   "bugs": {
     "url": "https://github.com/qais11/Musicloud/issues"
   },
-  "homepage": "https://github.com/qais11/Musicloud#readme"
+  "homepage": "https://github.com/qais11/Musicloud#readme",
+  "description": ""
 }
