@@ -11,5 +11,5 @@ angular.module('musicApp')
   $scope.getArtist();
   $scope.addToPlayList = mainService.addToPlayList;
   $scope.addTolikes = mainService.addTolikes;
-
+  
 })

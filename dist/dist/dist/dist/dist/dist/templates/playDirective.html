@@ -1,0 +1,28 @@
+<ul >
+  <li ng-repeat="name in songData">
+    <div class="data-show">
+      <div class="artist-name">
+        {{name.artistName}}
+      </div>
+      <img class="artist-img" ng-src="{{name.artworkUrl100}}" alt="" />
+      <div class="dash-board">
+        <div class="play-pause-btn">
+          <button id='' onclick='hidePlay(this)' ng-click=' playSong(name.previewUrl)' class="play fa fa-play my-fa-play" aria-hidden="true" type="button" name="button"></button>
+          <button id='' onclick='hideStop(this)' ng-click=' wavesurfer.stop()' class="stop fa fa-stop my-fa-play" aria-hidden="true" type="button" name="button"></button>
+          <p>{{name.trackName}}</p>
+        </div>
+        <div class="wave-img">
+          <img src="imgs/wave.png"/>
+        </div>
+        <div class="add-like-btn">
+          <button onclick='hightlight(this)' ng-click='addTolikes({artistName: name.artistName ,trackName: name.trackName , previewUrl :name.previewUrl, artworkUrl100: name.artworkUrl100 })' class="my-button fa fa-heart" aria-hidden="true" type="button" name="button"></button>
+          <button id='play-list' onclick='hightlight(this)' ng-click='addToPlayList({artistName: name.artistName ,trackName: name.trackName , previewUrl :name.previewUrl, artworkUrl100: name.artworkUrl100 })' class=" fa fa-plus" aria-hidden="true"type="button" name="button"></button>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
+<div id='waveform'>
+<button onclick='showWaveform()' class='fa fa fa-plus-circle' aria-hidden="true" type="button" name="button" n></button>
+<button onclick='hideWaveform()' class="fa fa-minus-circle" aria-hidden="true" type="button" name="button"></button>
+</div>

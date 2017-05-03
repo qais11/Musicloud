@@ -32,4 +32,9 @@ angular.module('musicApp')
   }
   $scope.addToPlayList = mainService.addToPlayList
   $scope.addTolikes = mainService.addTolikes;
+  $scope.newPage = function (){
+    $rootScope.isLoggedIn = true;
+    $rootScope.$emit("isLoggedIn", {})
+    $state.go('home')
+};
 })
