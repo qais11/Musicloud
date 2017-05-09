@@ -14,7 +14,7 @@
     <header>
       <div class="header-wrapper">
         <img src="imgs/musicloud2.png"/>
-        <button ng-show="isLoggedIn" class="home-btn" type="button" ui-sref="home">Home</button>
+        <button ng-if='logged' ng-show="isLoggedIn" class="home-btn" type="button" ui-sref="home">Home</button>
         <div class="nav-middle-container" >
           <form>
             <input type="text" placeholder="Search" ng-model="artistName"></input>
@@ -22,8 +22,8 @@
           </form>
         </div>
         <div class="nav-right-container" >
-          <img ng-show="isLoggedIn" class="user-img"src="imgs/user-img.png"/>
-          <div ng-show="isLoggedIn" href="">
+          <img ng-if='logged' ng-show="isLoggedIn" class="user-img"src="imgs/user-img.png"/>
+          <div ng-if='logged' ng-show="isLoggedIn" href="">
             <img class='menu-img' src="imgs/arrow.png" alt="" />
             <div class="dropdown-wrapper">
               <ul class="my-dropdown-menu">
@@ -34,7 +34,7 @@
             </div>
 
           </div>
-          <button ng-show="isLoggedIn" class='sign-out-btn' ng-click='signOut()' type="button">Sign out</button>
+          <button ng-if='logged'ng-show="isLoggedIn" class='sign-out-btn' ng-click='signOut()' type="button">Sign out</button>
 
         </div>
       </div>

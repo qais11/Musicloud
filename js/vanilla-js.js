@@ -17,6 +17,19 @@ function getWavesurfer(scope){
         wavesurfer.play()
         console.log(song);
         wavesurfer.load(song)
+        var currentPage = window.location.href;
+
+        // listen for changes
+        setInterval(function()
+        {
+          if (currentPage != window.location.href)
+          {
+            // page has changed, set new page as 'current'
+            currentPage = window.location.href;
+            wavesurfer.stop();
+
+          }
+        }, 0);
 
     }
 }
@@ -24,7 +37,7 @@ var hidePlay = function( obj ){
   showWaveform();
   obj.style.display = 'none';
   $(obj).next().show();
-  
+
 }
 var hideStop = function( obj ){
   hideWaveform()

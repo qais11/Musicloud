@@ -178,6 +178,19 @@ function getWavesurfer(scope){
         wavesurfer.play()
         console.log(song);
         wavesurfer.load(song)
+        var currentPage = window.location.href;
+
+        // listen for changes
+        setInterval(function()
+        {
+          if (currentPage != window.location.href)
+          {
+            // page has changed, set new page as 'current'
+            currentPage = window.location.href;
+            wavesurfer.stop();
+
+          }
+        }, 0);
 
     }
 }
@@ -185,7 +198,7 @@ var hidePlay = function( obj ){
   showWaveform();
   obj.style.display = 'none';
   $(obj).next().show();
-  
+
 }
 var hideStop = function( obj ){
   hideWaveform()
@@ -245,9 +258,11 @@ angular.module('musicApp')
 angular.module('musicApp')
 .controller('mainCtrl' , function($scope ,mainService, $rootScope , $state){
   var logged = false;
+  $scope.logged = logged
   $rootScope.$on("isLoggedIn", function () {
     $scope.isLoggedIn = $rootScope.isLoggedIn
     logged = $rootScope.isLoggedIn;
+    $scope.logged = logged
     console.log($rootScope.isLoggedIn);
   })
   $scope.sign = mainService.sign
@@ -273,6 +288,7 @@ angular.module('musicApp')
   $scope.signOut = function(){
   $state.go('login')
   logged = false;
+  $scope.logged = logged
   }
   $scope.addToPlayList = mainService.addToPlayList
   $scope.addTolikes = mainService.addTolikes;

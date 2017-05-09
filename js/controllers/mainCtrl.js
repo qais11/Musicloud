@@ -1,9 +1,11 @@
 angular.module('musicApp')
 .controller('mainCtrl' , function($scope ,mainService, $rootScope , $state){
   var logged = false;
+  $scope.logged = logged
   $rootScope.$on("isLoggedIn", function () {
     $scope.isLoggedIn = $rootScope.isLoggedIn
     logged = $rootScope.isLoggedIn;
+    $scope.logged = logged
     console.log($rootScope.isLoggedIn);
   })
   $scope.sign = mainService.sign
@@ -29,6 +31,7 @@ angular.module('musicApp')
   $scope.signOut = function(){
   $state.go('login')
   logged = false;
+  $scope.logged = logged
   }
   $scope.addToPlayList = mainService.addToPlayList
   $scope.addTolikes = mainService.addTolikes;
