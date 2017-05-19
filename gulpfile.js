@@ -10,7 +10,7 @@ var concat = require('gulp-concat')
 
 var paths = {
   styles: ['*.css'],
-  dist: 'dist/'
+  dist: './'
 }
 
 gulp.task('combine-css', function () {

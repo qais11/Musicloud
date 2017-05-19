@@ -61,7 +61,7 @@ function hightlight(obj){
   $(obj).toggleClass('hightlight');
 }
 $('.menu-img').click(function(){
-  console.log('hi');
+  console.log('clicked');
   $('.my-dropdown-menu').fadeIn( 300 )
 })
 $('section , .my-dropdown-menu a').click(function(){

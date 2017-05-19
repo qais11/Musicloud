@@ -21,9 +21,11 @@
             <button id="go-to-search-btn" type="submit" ng-click='goToSearchResults(); getArtist(artistName);' name="button"></button>
           </form>
         </div>
-        <div class="nav-right-container" >
-          <img ng-if='logged' ng-show="isLoggedIn" class="user-img"src="imgs/user-img.png"/>
-          <div ng-if='logged' ng-show="isLoggedIn" href="">
+        <div class="nav-right-container-wrapper">
+
+        <div ng-show='logged' class="nav-right-container" >
+          <img class="user-img"src="imgs/user-img.png"/>
+          <div href="">
             <img class='menu-img' src="imgs/arrow.png" alt="" />
             <div class="dropdown-wrapper">
               <ul class="my-dropdown-menu">
@@ -34,12 +36,13 @@
             </div>
 
           </div>
-          <button ng-if='logged'ng-show="isLoggedIn" class='sign-out-btn' ng-click='signOut()' type="button">Sign out</button>
+          <button class='sign-out-btn' ng-click='signOut()' type="button">Sign out</button>
 
         </div>
       </div>
-    </header>
-    <section>
+    </div>
+  </header>
+  <section>
       <ui-view></ui-view>
 
     </section>
