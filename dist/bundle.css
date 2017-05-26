@@ -353,7 +353,6 @@ footer {
 }
 
 body {
-  margin: 0;
   background-color: #eaeaea;
   text-align: center;
 }
@@ -682,6 +681,10 @@ small {
   font-family: 'Roboto Condensed', sans-serif;
 }
 
+.sign-out-li {
+  display: none;
+}
+
 .musicloud-p {
   font-family: 'Roboto Condensed', sans-serif;
   color: #f60;
@@ -697,4 +700,34 @@ small {
 
 .about-text > em {
   color: #FF7300;
+}
+
+@media (max-width :700px) {
+  .sign-out-btn {
+    display: none;
+  }
+
+  .sign-out-li {
+    display: block;
+    background-color: #f60;
+  }
+
+  .sign-out-li:hover {
+    color: black !important;
+    cursor: pointer;
+  }
+
+  .my-dropdown-menu {
+    bottom: -282px;
+    right: -21px;
+  }
+
+  section {
+    background-color: white;
+    margin-left: 118px;
+    margin-top: 25px;
+    text-align: center;
+    padding: 30px 30px;
+    padding-bottom: 41vh;
+  }
 }
