@@ -333,5 +333,7 @@ small{
     padding: 30px 30px;
     padding-bottom: 41vh;
   }
-  
+  .log-info > button{
+        width: 50%;
+  }
 }
