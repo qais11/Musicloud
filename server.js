@@ -5,7 +5,7 @@ const cors = require('cors');
 const port = 4000;
 
 app.use(express.static(__dirname + '/dist'))
-
+app.use(cors())
 app.listen(port , () => {
   console.log(`listenin' to prot ${port}`);
 });
